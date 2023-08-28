@@ -5,6 +5,7 @@ import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
 import Sidebar from "./components/Sidebar"
 import "./App.css";
+import Rightbar from "./components/Rightbar";
 
 const App = () => {
 
@@ -21,7 +22,9 @@ const App = () => {
               <Route path="/settings" element={<Settings />} />
             </Routes>
           </div>
-        <div className="rightBar"> Rightbar</div>
+        <div className="rightBar"> 
+          <Rightbar/>
+        </div>
       </div>    
     </>
   );

@@ -5,6 +5,7 @@ import netflix from "../images/netflix.jpeg";
 import academy from "../images/academy.png";
 import youtube from "../images/youtube.png";
 import js from "../images/js.png";
+import { Input } from "web3uikit";
 
 
 const Rightbar = () => {
@@ -38,6 +39,28 @@ const Rightbar = () => {
 
   return (
     <>
+    <div className="rightbarContent">
+      <Input
+        label="Search Twitter"
+        name="Search Twittter"
+        prefixIcon="search"
+        labelBgColor="#141d26">
+      </Input>
+
+      <div className="trends">
+        News for youtube
+        {trends.map((e) => {
+          return(
+            <>
+              <div className="trend" onClick={() => window.open(e.link)}>
+                <img src={e.img} className="trendImg"/>
+                <div className="trendText">{e.text}</div>
+              </div>
+            </>
+          )
+        })}
+      </div>
+    </div>
     </>
   );
 };

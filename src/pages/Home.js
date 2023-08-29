@@ -10,6 +10,7 @@ const Home = () => {
   const inputFile = useRef(null);
   const [selectedFile, setSelectedFile] = useState();
 
+
   const onImageClick = () => {
     inputFile.current.click();
   };
@@ -19,8 +20,11 @@ const Home = () => {
     setSelectedFile(URL.createObjectURL(img));
   };
 
+
+
   return (
     <>
+    <div className="pageIdentify">Home</div>
       <div className="mainContent">
         <div className="profileTweet">
           <img

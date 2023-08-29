@@ -2,7 +2,7 @@ import React from "react";
 import './Sidebar.css';
 import { Icon } from "web3uikit";
 import { Link } from "react-router-dom";
-
+import {isAuthenticated} from "../App";
 
 const Sidebar = () => {
   
@@ -15,7 +15,7 @@ const Sidebar = () => {
           <Icon fill="#ffffff" size={33} svg="twitter" />
         </div>
 
-        <Link to="/" className="link">
+        <Link to="/home" className="link">
         <div className="menuItems">
           <Icon fill="#ffffff" size={33} svg="list" />
           Home
@@ -35,7 +35,6 @@ const Sidebar = () => {
           Settings
         </div>
         </Link>
-        
       </div>
     </div>
     </>
